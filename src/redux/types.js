@@ -1,0 +1,26 @@
+// Filter categories reducer types
+const SET_SORT_BY = 'SET_SORT_BY';
+const SET_CATEGORY = 'SET_CATEGORY';
+
+// Pizzas reducer types
+const SET_PIZZAS = 'SET_PIZZAS';
+const SET_LOADING = 'SET_LOADING';
+
+// Cart reducer types
+const ADD_PIZZA_TO_CART = 'ADD_PIZZA_TO_CART';
+const CLEAR_CART = 'CLEAR_CART';
+const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
+const PLUS_ONE_ITEM = 'PLUS_ONE_ITEM';
+const MINUS_ONE_ITEM = 'MINUS_ONE_ITEM';
+
+export {
+  SET_SORT_BY,
+  SET_CATEGORY,
+  SET_PIZZAS,
+  SET_LOADING,
+  ADD_PIZZA_TO_CART,
+  CLEAR_CART,
+  REMOVE_CART_ITEM,
+  PLUS_ONE_ITEM,
+  MINUS_ONE_ITEM
+}

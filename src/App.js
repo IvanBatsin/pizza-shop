@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Switch, Route, Redirect} from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+import {Header} from './components';
+import {Cart, Home} from './pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Header></Header>
+      <div className="content">
+        <Switch>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/cart" exact component={Cart}></Route>
+          <Redirect to='/'></Redirect>
+        </Switch>
+      </div>
     </div>
   );
 }
 
+App.propTypes = {
+  pizzas: PropTypes.arrayOf(PropTypes.object).isRequired
+}
+
+App.defaultProps = {
+  pizzas: []
+}
+
+// Подход через хуки
 export default App;
+
+// Классовы подход
+// const mapStateToProps = state => {
+//   return {
+//     pizzas: state.pizza.items 
+//   }
+// }
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     getPizzas: items => dispatch(setPizzas(items))
+//   }
+// }
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
