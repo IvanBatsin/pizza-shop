@@ -19,7 +19,6 @@ const Categories = React.memo(function Categories({items, getCategoryIndex, acti
 });
 
 Categories.propTypes = {
-  // activeCategory: PropTypes.oneOf([PropTypes.number, null]),
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   getCategoryIndex: PropTypes.func.isRequired
 }

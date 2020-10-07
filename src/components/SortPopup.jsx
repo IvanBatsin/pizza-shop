@@ -56,7 +56,6 @@ const SortPopup = React.memo(function SortPopup({items, activeSort, changeSortBy
 }); 
 
 SortPopup.propTypes = {
-  // activeSort: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   changeSortBy: PropTypes.func.isRequired
 }

@@ -28,18 +28,4 @@ App.defaultProps = {
   pizzas: []
 }
 
-// Подход через хуки
 export default App;
-
-// Классовы подход
-// const mapStateToProps = state => {
-//   return {
-//     pizzas: state.pizza.items 
-//   }
-// }
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     getPizzas: items => dispatch(setPizzas(items))
-//   }
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
